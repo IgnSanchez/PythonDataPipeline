@@ -1,0 +1,39 @@
+REPORTE EJECUTIVO – SuperMart Colombia
+Fecha de generación: 2025-10-15 01:57:37
+
+1) Métricas principales
+- Ventas totales: $630.50
+- Transacciones: 15
+- Ticket promedio: $42.03
+- Clientes únicos: 13
+
+2) Top performers
+- Ciudad líder por ventas: Bogotá ($270.00)
+- Categoría líder por ventas: Electrónicos ($260.50)
+
+3) Indicadores de calidad de datos
+
+- Registros totales: 15
+- Duplicados detectados y removidos: 0
+- Fechas válidas: 15 / 15
+- Cantidades positivas: 15 / 15
+- Precios positivos: 15 / 15
+- Productos no encontrados: 0
+- Tiendas no encontradas: 0
+
+
+4) Archivos generados
+- Dataset transformado: /mnt/data/ventas_transformadas.csv
+- Data Mart: /mnt/data/data_mart_ventas.csv
+- Resumen ejecutivo: /mnt/data/resumen_ejecutivo.csv
+- Gráficos: 
+  * /mnt/data/grafico_ventas_por_ciudad.png
+  * /mnt/data/grafico_distribucion_por_categoria.png
+  * /mnt/data/grafico_transacciones_por_dia.png
+  * /mnt/data/histograma_montos_venta.png
+
+Notas:
+- Se unificaron formatos de fecha (ISO y día-mes-año).
+- Se imputó cliente_id faltante con 'CLIENTE_DESCONOCIDO'.
+- Se validó integridad referencial contra catálogos de productos y tiendas.
+- Se clasificaron transacciones en categorías de venta: Baja (<$20), Media ($20-$50), Alta (≥$50).

@@ -1,0 +1,16 @@
+fecha,anio,mes,dia_semana,ciudad,region,categoria,transacciones,unidades,ventas
+2024-03-15,2024,3,Viernes,Cali,Valle,Hogar,1,1,25.0
+2024-03-15,2024,3,Viernes,Cartagena,Bolívar,Electrónicos,1,2,31.0
+2024-03-15,2024,3,Viernes,Medellín,Antioquia,Electrónicos,1,3,46.5
+2024-03-16,2024,3,Sábado,Bogotá,Cundinamarca,Alimentos,1,3,30.0
+2024-03-16,2024,3,Sábado,Medellín,Antioquia,Electrónicos,1,1,15.5
+2024-03-17,2024,3,Domingo,Barranquilla,Atlántico,Electrónicos,1,2,60.0
+2024-03-17,2024,3,Domingo,Bogotá,Cundinamarca,Ropa,1,1,45.0
+2024-03-18,2024,3,Lunes,Cali,Valle,Hogar,1,2,50.0
+2024-03-18,2024,3,Lunes,Cartagena,Bolívar,Electrónicos,1,5,77.5
+2024-03-19,2024,3,Martes,Bogotá,Cundinamarca,Alimentos,1,4,40.0
+2024-03-20,2024,3,Miércoles,Barranquilla,Atlántico,Electrónicos,1,1,30.0
+2024-03-20,2024,3,Miércoles,Bogotá,Cundinamarca,Ropa,1,2,90.0
+2024-03-21,2024,3,Jueves,Cali,Valle,Hogar,1,1,25.0
+2024-03-22,2024,3,Viernes,Bogotá,Cundinamarca,Alimentos,1,2,20.0
+2024-03-23,2024,3,Sábado,Bogotá,Cundinamarca,Ropa,1,1,45.0
