@@ -1,0 +1,110 @@
+==========================================================
+                INFORME FINAL DE PROYECTO
+==========================================================
+
+Proyecto: Pipeline ETL – SuperMart Colombia
+Empresa Consultora: EAN TechRetail Solutions
+Cliente: Cadena de Supermercados SuperMart Colombia
+Autor: Juan Ignacio Sanchez Olaya - Juan Nicolas Junca Torres
+Rol: Ingeniero de Datos
+Fecha: Octubre de 2025
+Licencia: MIT License
+
+----------------------------------------------------------
+1. INTRODUCCIÓN
+----------------------------------------------------------
+SuperMart Colombia, una cadena nacional de supermercados, ha venido recopilando datos de ventas sin una estructura unificada que permita analizarlos efectivamente. 
+El presente proyecto, desarrollado por EAN TechRetail Solutions, tiene como propósito diseñar e implementar un pipeline ETL (Extract, Transform, Load) en Python para centralizar, limpiar y transformar los datos, generando información estratégica para la toma de decisiones comerciales.
+
+El trabajo se llevó a cabo aplicando buenas prácticas de ingeniería de datos, asegurando calidad, integridad y trazabilidad en cada fase del proceso.
+
+----------------------------------------------------------
+2. OBJETIVOS
+----------------------------------------------------------
+
+OBJETIVO GENERAL:
+Diseñar e implementar un pipeline ETL en Python que permita extraer, transformar, analizar y visualizar datos de ventas de SuperMart Colombia para apoyar la toma de decisiones basadas en datos.
+
+OBJETIVOS ESPECÍFICOS:
+- Estandarizar y limpiar los datos de ventas provenientes de archivos CSV.
+- Unificar catálogos de productos y tiendas mediante integraciones automáticas.
+- Calcular métricas de negocio como ventas totales, ticket promedio y transacciones.
+- Crear un Data Mart optimizado para análisis.
+- Generar reportes ejecutivos y visualizaciones automáticas con Python.
+
+----------------------------------------------------------
+3. DESARROLLO DEL PROYECTO
+----------------------------------------------------------
+
+FASE 1: EXTRACCIÓN (E)
+Se desarrolló un módulo de carga con manejo de errores para leer archivos CSV (ventas, productos y tiendas) usando pandas. 
+El sistema valida la existencia de archivos, detecta errores de formato y calcula estadísticas básicas como número de registros por fuente.
+
+FASE 2: TRANSFORMACIÓN (T)
+Incluyó la limpieza y estandarización de los datos:
+- Corrección de formatos de fecha (YYYY-MM-DD y DD-MM-YYYY)
+- Imputación de valores nulos en cliente_id con "CLIENTE_DESCONOCIDO"
+- Eliminación de duplicados en order_id
+- Cálculo de venta_total (cantidad × precio_unitario)
+- Clasificación de las ventas por categoría (Baja, Media, Alta)
+- Enriquecimiento con información de productos y tiendas
+- Generación de dimensiones temporales (año, mes, día de la semana)
+- Validación de integridad referencial entre las tablas
+
+FASE 3: CARGA (L)
+Los datos transformados se guardaron en tres salidas:
+1. Dataset completo transformado (`ventas_transformadas.csv`)
+2. Data Mart agregado (`data_mart_ventas.csv`)
+3. Resumen ejecutivo con métricas principales (`resumen_ejecutivo.csv`)
+
+FASE 4: ANÁLISIS Y REPORTES
+Se crearon visualizaciones automáticas con Matplotlib:
+- Gráfico de barras: Ventas totales por ciudad
+- Gráfico circular: Distribución de ventas por categoría
+- Gráfico de barras: Transacciones por día de la semana
+- Histograma: Distribución de montos de venta
+
+Además, se generó un reporte ejecutivo en texto (`reporte_ejecutivo.txt`) con métricas clave y validaciones de calidad.
+
+----------------------------------------------------------
+4. ANÁLISIS DE RESULTADOS
+----------------------------------------------------------
+El pipeline permitió transformar datos dispersos en un modelo estructurado con alta calidad.  
+Principales resultados obtenidos:
+- 15 registros procesados sin errores.
+- 100% de consistencia en fechas y cantidades.
+- Ventas totales consolidadas en todas las ciudades.
+- Identificación de la ciudad líder (Bogotá) y la categoría con mayores ventas (Electrónicos).
+- Creación de un Data Mart que facilita el análisis por tiempo, ciudad y categoría.
+
+Los gráficos generados ofrecen una visión clara del comportamiento de ventas, revelando patrones temporales y diferencias entre regiones.
+
+----------------------------------------------------------
+5. CONCLUSIONES
+----------------------------------------------------------
+- La implementación del pipeline ETL mejoró significativamente la calidad y disponibilidad de la información de ventas.
+- El proceso automatizado reduce errores humanos y tiempos de procesamiento.
+- El uso de Python y pandas permitió un desarrollo flexible y reproducible.
+- Las visualizaciones y reportes ejecutivos simplifican la interpretación de datos para los equipos de negocio.
+- El modelo puede ampliarse fácilmente para incluir fuentes adicionales o integrarse a plataformas de BI (como Power BI o Tableau).
+
+----------------------------------------------------------
+6. RECOMENDACIONES
+----------------------------------------------------------
+- Automatizar la ejecución diaria o semanal mediante un orquestador (por ejemplo, Apache Airflow).
+- Integrar una base de datos SQL para almacenamiento histórico.
+- Implementar alertas automáticas ante anomalías o datos incompletos.
+- Extender el análisis a métricas de clientes, promociones y rentabilidad.
+
+----------------------------------------------------------
+7. REFERENCIAS TÉCNICAS
+----------------------------------------------------------
+- McKinney, W. (2022). *Python for Data Analysis.* O’Reilly Media.
+- Documentación oficial de pandas: https://pandas.pydata.org/
+- Documentación de Matplotlib: https://matplotlib.org/
+- Estándar ETL Pipeline Design – Data Engineering Best Practices (2023)
+- EAN TechRetail Solutions Internal Guidelines (2025)
+
+----------------------------------------------------------
+FIN DEL INFORME
+==========================================================
