@@ -57,8 +57,8 @@ SuperMart_ETL_Project_FULL/
 ---
 
 ## 👨‍💻 Autor
-**[Tu Nombre]**  
-Ingeniero de Datos – EAN TechRetail Solutions
+Juan Ignacio Sanchez - Juan Nicolas Junca 
+Ingenieros De Sistemas – EAN TechRetail Solutions
 
 ---
 
